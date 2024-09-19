@@ -1,13 +1,30 @@
+/* Colors */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --cta-color: #28a745;
+  --action-color: #ffc107;
+  --attention-color: #dc3545;
+  --base-color: #343a40;
+  --button-text-color: #fff;
+}
+
 /* Default State */
 .ergeon-button {
   display: inline-block;
   cursor: pointer;
-  border: 0;
+  border: 1px solid transparent;
   border-radius: 4px;
   font-weight: 600;
   line-height: 1;
   font-family: 'Hind Vadodara', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  transition: all ease 0.2s;
 }
+.ergeon-button.is-disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+};
 
 /* Size */
 .ergeon-button--small {
@@ -26,24 +43,143 @@
   padding: 12px 20px;
 }
 
-/* Type */
-.ergeon-button--primary {
-  background-color: #0E61B4;
+/* Fill = Solid */
+.ergeon-button--primary.ergeon-button--solid {
+  background-color: #0970CE;
   color: white;
 }
-.ergeon-button--cta {
+.ergeon-button--primary.ergeon-button--solid:hover {
+  background-color: #0E61B4;
+}
+.ergeon-button--cta.ergeon-button--solid {
   background-color: #54A788;
   color: white;
 }
-.ergeon-button--action {
+.ergeon-button--cta.ergeon-button--solid:hover {
+  background-color: #468A6F;
+}
+.ergeon-button--action.ergeon-button--solid {
   background-color: #F09E3A;
   color: white;
 }
-.ergeon-button--attention {
+.ergeon-button--action.ergeon-button--solid:hover {
+  background-color: #DA6F18;
+}
+.ergeon-button--attention.ergeon-button--solid {
   background-color: #FF7D5A;
   color: white;
 }
-.ergeon-button--base {
+.ergeon-button--attention.ergeon-button--solid:hover {
+  background-color: #D85430;
+}
+.ergeon-button--base.ergeon-button--solid {
   background-color: #F0F0F7;
   color: #16121C;
+}
+.ergeon-button--base.ergeon-button--solid:hover {
+  background-color: #E2E2EA;
+}
+
+
+/* Type = Lined */
+.ergeon-button--primary.ergeon-button--lined {
+  border-color: #0970CE;
+  background-color: transparent;
+  color: #0970CE;
+}
+
+.ergeon-button--primary.ergeon-button--lined:hover {
+  background-color: #E6F1FB;
+}
+
+.ergeon-button--cta.ergeon-button--lined {
+  border-color: #54A788;
+  background-color: transparent;
+  color: #54A788;
+}
+
+.ergeon-button--cta.ergeon-button--lined:hover {
+  background-color: #EDF7F4;
+}
+
+.ergeon-button--action.ergeon-button--lined {
+  border-color: #F09E3A;
+  background-color: transparent;
+  color: #F09E3A;
+}
+
+.ergeon-button--action.ergeon-button--lined:hover {
+  background-color: #FFF8EF;
+}
+
+.ergeon-button--attention.ergeon-button--lined {
+  border-color: #FF7D5A;
+  background-color: transparent;
+  color: #FF7D5A;
+}
+
+.ergeon-button--attention.ergeon-button--lined:hover {
+  background-color: #FFF3ED;
+}
+
+.ergeon-button--base.ergeon-button--lined {
+  border-color: #E2E2EA;
+  background-color: transparent;
+  color: #16121C;
+}
+
+.ergeon-button--base.ergeon-button--lined:hover {
+  background-color: #F0F0F7;
+}
+
+
+/* Type = Boundless */
+.ergeon-button--primary.ergeon-button--boundless {
+  border-color: transparent;
+  background-color: transparent;
+  color: #0970CE;
+}
+
+.ergeon-button--primary.ergeon-button--boundless:hover {
+  background-color: #E6F1FB;
+}
+
+.ergeon-button--cta.ergeon-button--boundless {
+  border-color: transparent;
+  background-color: transparent;
+  color: #54A788;
+}
+
+.ergeon-button--cta.ergeon-button--boundless:hover {
+  background-color: #EDF7F4;
+}
+
+.ergeon-button--action.ergeon-button--boundless {
+  border-color: transparent;
+  background-color: transparent;
+  color: #F09E3A;
+}
+
+.ergeon-button--action.ergeon-button--boundless:hover {
+  background-color: #FFF8EF;
+}
+
+.ergeon-button--attention.ergeon-button--boundless {
+  border-color: transparent;
+  background-color: transparent;
+  color: #FF7D5A;
+}
+
+.ergeon-button--attention.ergeon-button--boundless:hover {
+  background-color: #FFF3ED;
+}
+
+.ergeon-button--base.ergeon-button--boundless {
+  border-color: transparent;
+  background-color: transparent;
+  color: #16121C;
+}
+
+.ergeon-button--base.ergeon-button--boundless:hover {
+  background-color: #F0F0F7;
 }
